@@ -117,7 +117,7 @@ a {
 }
 .brand-logo {
   display: block;
-  width: 260px;
+  width: min(260px, 52vw);
   height: 96px;
   object-fit: contain;
 }
@@ -466,6 +466,9 @@ h2.section-title {
 .contact-detail a {
   color: var(--cream);
 }
+.contact-detail span:last-child {
+  overflow-wrap: anywhere;
+}
 .field {
   margin-bottom: 16px;
 }
@@ -568,5 +571,54 @@ footer {
   }
   section {
     padding: 60px 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav-inner {
+    padding: 10px 16px;
+  }
+  .brand-logo {
+    height: 72px;
+  }
+  .nav-cta {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .burger {
+    padding: 4px 0 4px 8px;
+  }
+  .nav-mobile {
+    padding: 0 16px 16px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions button {
+    width: 100%;
+  }
+  .hero {
+    gap: 30px;
+    padding-top: 40px;
+  }
+  .hero h1 {
+    font-size: 34px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .facts {
+    padding: 30px 20px;
+    gap: 18px 12px;
+  }
+  h2.section-title {
+    font-size: 30px;
+  }
+  .contact-wrap {
+    padding: 30px 22px;
+  }
+  .hours-list li {
+    gap: 16px;
   }
 }
